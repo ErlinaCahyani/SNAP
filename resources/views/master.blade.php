@@ -44,9 +44,7 @@
                 <div class="col-md-12">
                     <div class="block">
                         <h1 class="heading">SNAP Restaurant</h1>
-                        <p>
-                            Lorem ipsum
-                        </p>
+                        Lorem ipsum
                     </div>
                 </div>
             </div>
