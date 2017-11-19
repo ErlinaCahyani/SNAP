@@ -20,10 +20,13 @@
 		<link rel="stylesheet" href="{{ asset('ResTem/css/main.css') }}">
         <!-- Responsive Stylesheet -->
 		<link rel="stylesheet" href="{{ asset('ResTem/css/responsive.css') }}">
+
+
 		<!-- Js -->
         <script src="{{ asset('ResTem/js/vendor/modernizr-2.6.2.min.js') }}"></script>
         <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
         <script>window.jQuery || document.write('<script src="{{ asset('ResTem/js/vendor/jquery-1.10.2.min.js') }}"><\/script>')</script>
+        <script src="{{ asset('ResTem/js/boots.js') }}"></script>
         <script src="{{ asset('ResTem/js/jquery.nav.js') }}"></script>
         <script src="{{ asset('ResTem/js/jquery.sticky.js') }}"></script>
         <script src="{{ asset('ResTem/js/bootstrap.min.js') }}"></script>
@@ -41,12 +44,20 @@
         <img class="img-responsive" src="{{ asset('ResTem/images/header.jpg') }}" alt=""></div>
         <div class="container-header2">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
                     <div class="block">
-                        <h1 class="heading">SNAP Restaurant</h1>
-                        Lorem ipsum
-                    </div>
+                        <!--<h1 class="headingheader">SNAP Restaurant</h1>-->
+                        <div >
+                            <img class="img-responsive" src="{{ asset('ResTem/images/logo-header.png') }}" alt="">
+                        </div>
+                        </br>
+                        <p class="conten-head">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        </p>
+                    </div><!--end block-->
                 </div>
+                <div class="col-md-3"></div>
             </div>
       </div>
     </section>
@@ -78,11 +89,11 @@
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                               <ul class="nav navbar-nav navbar-right" id="top-nav">
                                 <li><a href="#hero-area">Home</a></li>
-                                <li><a href="#about-us">Specials</a></li>
-                                <li><a href="#blog">Menus</a></li>
-                                <li><a href="#price">Reserve/Order</a></li>
-                                <!--<li><a href="#subscribe">news</a></li>-->
-                                <li><a href="#contact-us">About</a></li>
+                                <li><a href="#about-us">about us</a></li>
+                                <li><a href="#blog">Blog</a></li>
+                                <li><a href="#price">menu</a></li>
+                                <li><a href="#subscribe">news</a></li>
+                                <li><a href="#contact-us">contacts</a></li>
                               </ul>
                             </div><!-- /.navbar-collapse -->
                           </div><!-- /.container-fluid -->
@@ -92,6 +103,84 @@
             </div><!-- .row close -->
         </div><!-- .container close -->
 	</nav><!-- header close -->
+
+    <!--
+    Specials start
+    ============================= -->
+
+    <section id="specials">
+                <div class="row">
+                <div class="col-md-12">
+                    <div class="block">
+                        <h1 class="heading wow fadeInUp" data-wow-duration="400ms" data-wow-delay="500ms" >Our <span>Special Menus</span> 
+                        </h1>
+                        </br>
+                        <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="600ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim </br> ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </br>
+                    </div>
+                </div><!-- .col-md-12 close -->
+            </div><!-- .row close -->
+
+        <div class="container">
+        <div class="row wow fadeInUp">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <div class="row coklat">
+                            <div class="container-fluid">
+                                <div class="col-md-4 conten-cs">
+                                    Kepiting Goreng Yummmi
+                                </div>
+                                <div class="col-md-8">
+                                    <img class="img-responsive img-cs" src="{{ asset('ResTem/images/photo/cSpecial-1.jpg') }}" alt="First Menu Special">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="row coklat">
+                            <div class="container-fluid">
+                                <div class="col-md-4 conten-cs">
+                                    Kepiting Goreng Yummmi
+                                </div>
+                                <div class="col-md-8">
+                                    <img class="img-responsive img-cs" src="{{ asset('ResTem/images/photo/cSpecial-2.jpg') }}" alt="First Menu Special">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row coklat">
+                            <div class="container-fluid">
+                                <div class="col-md-4 conten-cs">
+                                    Kepiting Goreng Yummmi
+                                </div>
+                                <div class="col-md-8">
+                                    <img class="img-responsive img-cs" src="{{ asset('ResTem/images/photo/cSpecial-3.jpg') }}" alt="First Menu Special">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!--end carousel-->
+                
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+        </div>
+        </div>
+    </section><!-- #call-to-action close -->
+
+    <!--
+    Special end
+    ============================= -->
+
     <!--
     Slider start
     ============================== -->

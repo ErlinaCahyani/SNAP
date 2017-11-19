@@ -1,0 +1,4 @@
+3E1C0B => coklat
+FF9900 => orange
+FFFE9F => cream
+980000 => maroon

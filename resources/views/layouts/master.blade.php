@@ -78,11 +78,11 @@
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                               <ul class="nav navbar-nav navbar-right" id="top-nav">
                                 <li><a href="#hero-area">Home</a></li>
-                                <li><a href="#about-us">Specials</a></li>
-                                <li><a href="#blog">Menus</a></li>
-                                <li><a href="#price">Reserve/Order</a></li>
-                                <!--<li><a href="#subscribe">news</a></li>-->
-                                <li><a href="#contact-us">About</a></li>
+                                <li><a href="#about-us">about us</a></li>
+                                <li><a href="#blog">Blog</a></li>
+                                <li><a href="#price">menu</a></li>
+                                <li><a href="#subscribe">news</a></li>
+                                <li><a href="#contact-us">contacts</a></li>
                               </ul>
                             </div><!-- /.navbar-collapse -->
                           </div><!-- /.container-fluid -->

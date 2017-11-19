@@ -8,13 +8,15 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>SNAP Restaurant</title>
+    <!--{{ config('app.name', 'SNAP Restaurant') }}-->
 
     <!-- Styles -->
+    <link rel="stylesheet" href="{{ asset('ResTem/css/main.css') }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
+    <div id="app" class="cream bapp">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
@@ -29,7 +31,8 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        <img src="{{ asset('ResTem/images/logo.png') }}" alt="Logo">
+                        <!--{{ config('app.name', 'SNAP Restaurant') }}-->
                     </a>
                 </div>
 
