@@ -360,6 +360,17 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
   line-height: 26px;
   padding: 40px 0px;
 }
+
+/*--
+    Profile Start
+--*/
+.style4 {
+    color: pink;
+    font-size: 30px;
+    font-family: arial, helvetica, sans-serif;
+    padding-left: 10%;
+}
+
 /*--
     blog Start
 --*/

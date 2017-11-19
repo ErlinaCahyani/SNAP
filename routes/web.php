@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
 
 Route::group(['middleware' =>'web'],function (){
 	Route::auth();
@@ -34,11 +34,3 @@ Route::group(['middleware' => ['web','auth']],function (){
 });
 
 Route::prefix('admin')->group(function() {
-Route::get('/',['middleware' => ['admin'],function (){
-	return view('admins.adminHome');
-}]);
-Route::get('/coba',['middleware' => ['admin'],function (){
-	return view('admins.master');
-}]);
-Route::resource('managemenus', 'ManageMenuController');
-});
