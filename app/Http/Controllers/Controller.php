@@ -28,7 +28,7 @@ class Controller extends BaseController
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+   /* public function index()
     {
         if(Auth::user()->type=="Admin"){
 			return view(admins.adminHome);
@@ -37,5 +37,5 @@ class Controller extends BaseController
 		}
         //return view('admin');
     }
-
+*/
 }

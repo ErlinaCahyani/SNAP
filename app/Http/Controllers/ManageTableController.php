@@ -4,25 +4,24 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Menu;
-use Hash;
-//use App\Http\Middleware\isAdmin;
+use App\Table;
 
-class ManageMenuController extends Controller
+class ManageTableController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function __construct()
     {
        $this->middleware('admin');
     }
     public function index(Request $request)
     {
-        $admins = Menu::orderBy('id','DESC')->paginate(5);
-        return view('admins.indexMenu',compact('admins'))->with('i', ($request->input('page', 1) - 1) * 5);
+        $admins = Table::orderBy('id','DESC')->paginate(5);
+        return view('admins.indexTable',compact('admins'))->with('i', ($request->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -32,7 +31,7 @@ class ManageMenuController extends Controller
      */
     public function create()
     {
-        return view('admins.createMenu');
+        return view('admins.createTable');
     }
 
     /**
@@ -45,14 +44,15 @@ class ManageMenuController extends Controller
     {
         $this->validate($request, [
          'name' => 'required',
+         'lokasi' => 'required',
+         'kapasitas_min' => 'required',
+         'status' => 'required',
          'desc' => 'required',
-         'price' => 'required',
-         'catagory' => 'required',
          ]);
          $input = $request->all();
-         $admin = Menu::create($input);
-         return redirect()->route('managemenus.index')
-         ->with('success','Admin successfully added'); 
+         $admin = Table::create($input);
+         return redirect()->route('managetables.index')
+         ->with('success','Admin successfully added');
     }
 
     /**
@@ -63,8 +63,8 @@ class ManageMenuController extends Controller
      */
     public function show($id)
     {
-        $admin = Menu::find($id);
-        return view('admins.showMenu',compact('admin'));
+        $admin = Table::find($id);
+        return view('admins.showTable',compact('admin'));
     }
 
     /**
@@ -75,8 +75,8 @@ class ManageMenuController extends Controller
      */
     public function edit($id)
     {
-        $admin = Menu::find($id);
-        return view('admins.editMenu',compact('admin')); 
+        $admin = Table::find($id);
+        return view('admins.editTable',compact('admin'));
     }
 
     /**
@@ -88,16 +88,17 @@ class ManageMenuController extends Controller
      */
     public function update(Request $request, $id)
     {
-         $this->validate($request, [
+        $this->validate($request, [
          'name' => 'required',
-         'price' => 'required',
-         'catagory' => 'required',
+         'lokasi' => 'required',
+         'kapasitas_min' => 'required',
+         'status' => 'required',
          'desc' => 'required',
          ]);
          $input = $request->all();
-         $admin = Menu::find($id);
+         $admin = Table::find($id);
          $admin->update($input);
-         return redirect()->route('managemenus.index')->with('success','Admin successfully updated'); 
+         return redirect()->route('managetables.index')->with('success','Admin successfully updated');
     }
 
     /**
@@ -108,8 +109,8 @@ class ManageMenuController extends Controller
      */
     public function destroy($id)
     {
-        Menu::find($id)->delete();
-        return redirect()->route('managemenus.index')
+        Table::find($id)->delete();
+        return redirect()->route('managetables.index')
         ->with('success','Admin successfully deleted');
     }
 }

@@ -37,8 +37,6 @@ Route::prefix('admin')->group(function() {
 Route::get('/',['middleware' => ['admin'],function (){
 	return view('admins.adminHome');
 }]);
-Route::get('/coba',['middleware' => ['admin'],function (){
-	return view('admins.master');
-}]);
 Route::resource('managemenus', 'ManageMenuController');
+Route::resource('managetables', 'ManageTableController');
 });
