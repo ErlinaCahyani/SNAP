@@ -31,7 +31,7 @@ Route::group(['middleware' => ['web','auth']],function (){
 		if(Auth::user()->type=="Admin"){
 			return view('admins.adminHome');
 		} else {
-			return view('userHome');
+			return view('users.userHome');
 		}
 	});
 });
@@ -53,5 +53,13 @@ Route::resource('manageordertotals', 'ManageOrderTotalController');
 Route::resource('manageresers', 'ManageReservationController');
 Route::get('carireser','ManageReservationController@search');
 Route::resource('manageusers', 'ManageUserController');
-Route::get('cariuser','ManageUserController@search');
+Route::get('cariser','ManageUserController@search');
+});
+
+Route::prefix('user')->group(function() {
+Route::get('/',['middleware' => ['user'],function (){
+	return view('users.userHome');
+}]);
+Route::resource('order', 'OrderController');
+
 });
