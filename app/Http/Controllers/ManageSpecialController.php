@@ -4,32 +4,26 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Table;
+use App\Special;
+use Hash;
 
-class ManageTableController extends Controller
+class ManageSpecialController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    
-    public function __construct()
+     public function __construct()
     {
        $this->middleware('admin');
     }
     public function index(Request $request)
     {
-        $admins = Table::orderBy('id','DESC')->paginate(5);
-        return view('admins.indexTable',compact('admins'))->with('i', ($request->input('page', 1) - 1) * 5);
+        $admins = Special::orderBy('id','DESC')->paginate(5);
+        return view('admins.indexSpecial',compact('admins'))->with('i', ($request->input('page', 1) - 1) * 5);
     }
 
-    public function search(Request $request)
-    {
-        $cari = $request->get('search');
-        $admins = Table::where('name','like','%'.$cari.'%')->paginate(10);
-        return view('admins.indexTable', compact('admins'))->with('i', ($request->input('page', 1) - 1) * 5);
-    }
     /**
      * Show the form for creating a new resource.
      *
@@ -37,7 +31,7 @@ class ManageTableController extends Controller
      */
     public function create()
     {
-        return view('admins.createTable');
+        
     }
 
     /**
@@ -50,14 +44,14 @@ class ManageTableController extends Controller
     {
         $this->validate($request, [
          'name' => 'required',
-         'lokasi' => 'required',
-         'kapasitas_min' => 'required',
          'desc' => 'required',
-         'status' => 'required',
+         'price' => 'required',
+         'catagory' => 'required',
          ]);
          $input = $request->all();
-         $admin = Table::create($input);
-         return redirect()->route('managetables.index')->with('success','Admin successfully added');
+         $admin = Special::create($input);
+         return redirect()->route('managespecials.index')
+         ->with('success','Admin successfully added'); 
     }
 
     /**
@@ -68,8 +62,7 @@ class ManageTableController extends Controller
      */
     public function show($id)
     {
-        $admin = Table::find($id);
-        return view('admins.showTable',compact('admin'));
+        //
     }
 
     /**
@@ -80,8 +73,7 @@ class ManageTableController extends Controller
      */
     public function edit($id)
     {
-        $admin = Table::find($id);
-        return view('admins.editTable',compact('admin'));
+        //
     }
 
     /**
@@ -93,17 +85,7 @@ class ManageTableController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request, [
-         'name' => 'required',
-         'lokasi' => 'required',
-         'kapasitas_min' => 'required',
-         'status' => 'required',
-         'desc' => 'required',
-         ]);
-         $input = $request->all();
-         $admin = Table::find($id);
-         $admin->update($input);
-         return redirect()->route('managetables.index')->with('success','Admin successfully updated');
+        //
     }
 
     /**
@@ -114,8 +96,8 @@ class ManageTableController extends Controller
      */
     public function destroy($id)
     {
-        Table::find($id)->delete();
-        return redirect()->route('managetables.index')
+        Special::find($id)->delete();
+        return redirect()->route('managespecials.index')
         ->with('success','Admin successfully deleted');
     }
 }

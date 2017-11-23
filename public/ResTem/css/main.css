@@ -56,6 +56,9 @@ a:active {
   width: 100%;
   height: 100vh;
 }
+.bapp2{
+  padding-top: 8%;
+}
 
 
 /*============== Mixins style start ================*/
@@ -71,9 +74,47 @@ a:active {
   background: url("../images/overlay-pattern.png") #000000;
   opacity: 0.3;
 }
+
+/*padding=========================================
+*/
+.p3{
+  padding: 3%;
+  padding-top: 0%;
+}
+.p1{
+  padding: 1%;
+  padding-top: 3%;
+}
 /*
 warna=============================================
 */
+.gra{
+background: linear-gradient(#F3F3F3, #fff); /* Standard syntax */
+  background: -webkit-linear-gradient(#F3F3F3, #fff); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#F3F3F3, #fff); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#F3F3F3, #fff); /* For Firefox 3.6 to 15 */
+}
+.textcoklat{
+  color: #3E1C0B;
+}
+.textmaroon{
+  color:#980000 ;
+}
+
+.x{
+  width: 100%;
+}
+.biru{
+  background-color: #0088CC;
+  color: #fff;
+  width: 100%;
+}
+.abu{
+  background-color: #F3F3F3;
+}
+.putih{
+  background-color: #fff;
+}
 .coklat {
   background-color: #3E1C0B;
   color: #fff;

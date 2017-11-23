@@ -12,6 +12,8 @@
     <!--{{ config('app.name', 'SNAP Restaurant') }}-->
 
     <!-- Styles -->
+    <!-- Font-awesome.min css -->
+    <link rel="stylesheet" href="{{ asset('ResTem/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('ResTem/css/main.css') }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -51,10 +53,13 @@
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                     <i class="fa fa-user" style="font-size: 20px;"></i><span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
+                                    <li style="padding-left: 10px">
+                                        <strong>{{ Auth::user()->name }}</strong>
+                                    </li>
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();

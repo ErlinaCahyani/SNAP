@@ -1,5 +1,6 @@
 <?php
 
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -15,6 +16,7 @@ class ManageMenuController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function __construct()
     {
        $this->middleware('admin');
@@ -23,6 +25,16 @@ class ManageMenuController extends Controller
     {
         $admins = Menu::orderBy('id','DESC')->paginate(5);
         return view('admins.indexMenu',compact('admins'))->with('i', ($request->input('page', 1) - 1) * 5);
+    }
+
+    /*
+    Searching
+    */
+    public function search(Request $request)
+    {
+        $cari = $request->get('search');
+        $admins = Menu::where('name','like','%'.$cari.'%')->paginate(10);
+        return view('admins.indexMenu', compact('admins'))->with('i', ($request->input('page', 1) - 1) * 5);
     }
 
     /**

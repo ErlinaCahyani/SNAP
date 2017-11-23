@@ -1,0 +1,60 @@
+delimiter //
+drop trigger if exists updateTotalOrder;//
+create trigger updateTotalOrder
+after insert on ordermenus
+for each row
+begin
+set @count = (select count(*) from orderTotals where id = new.id);
+if @count=0 then
+insert into ordertotals(id,total) value(new.id, new.totalHarga);
+else
+if new.id is not null then
+update ordertotals
+set total = total+new.totalHarga
+where id=new.id;
+end if;
+end if;
+end//
+
+drop trigger if exists updateTotalHarga;//
+create trigger updateTotalHarga
+before insert on ordermenus
+for each row
+begin
+set @menu = (select price from menus where id = new.idMenu);
+set new.totalHarga = @menu * new.jumlah;
+end;//
+
+drop trigger if exists updateTotalOrder2;//
+create trigger updateTotalOrder2
+after update on ordermenus
+for each row
+begin
+if(old.totalharga > new.totalharga) then
+update ordertotals
+set total = total - (old.totalharga-new.totalharga);
+else
+update ordertotals
+set total = total + (new.totalharga-old.totalharga);
+end if;
+end; //
+
+drop trigger if exists updateTotalOrder3;//
+create trigger updateTotalOrder3
+before delete on ordermenus
+for each row
+begin
+update ordertotals
+set total = total-old.totalharga;
+end; //
+
+
+
+delimiter //
+create trigger insertMenuSpecial
+after insert on specials
+for each row
+begin
+insert into menus(name, desc, price, catagory)
+values (new.name, new.desc, new.price, new.catagory);
+end; //

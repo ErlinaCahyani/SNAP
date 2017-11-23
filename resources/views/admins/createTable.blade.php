@@ -24,7 +24,7 @@
  </div>
  <div class="col-xs-12 col-sm-12 col-md-12">
  <div class="form-group">
- <strong>Minimum Capacity:</strong>
+ <strong>Maximum Capacity:</strong>
  {!! Form::text('kapasitas_min', null, array('placeholder' => 'Minimum Capacity','class' => 'form-control')) !!}
  </div>
  </div>
@@ -43,7 +43,9 @@
  <div class="form-group">
  <strong>Status:</strong>
 </br>
- {!! Form::label('status', 'Unbooked') !!}
+{!! Form::select('status', array(
+    'Unbooked' => 'Unbooked',
+))!!}
  </div>
  </div>
 <div class="col-xs-12 col-sm-12 col-md-12">

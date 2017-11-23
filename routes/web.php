@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/a', function () {
+    return view('layouts.masterDashboard');
+});
 
 Auth::routes();
 
@@ -38,5 +41,17 @@ Route::get('/',['middleware' => ['admin'],function (){
 	return view('admins.adminHome');
 }]);
 Route::resource('managemenus', 'ManageMenuController');
+Route::get('carimenu','ManageMenuController@search');
+Route::resource('managespecials', 'ManageMenuController');
 Route::resource('managetables', 'ManageTableController');
+Route::get('caritable','ManageTableController@search');
+Route::resource('manageorders', 'ManageOrderController');
+Route::resource('morder','MOrderController');
+Route::get('cariorder','ManageOrderController@search');
+Route::get('cariorder2','ManageOrderController@search2');
+Route::resource('manageordertotals', 'ManageOrderTotalController');
+Route::resource('manageresers', 'ManageReservationController');
+Route::get('carireser','ManageReservationController@search');
+Route::resource('manageusers', 'ManageUserController');
+Route::get('cariuser','ManageUserController@search');
 });
