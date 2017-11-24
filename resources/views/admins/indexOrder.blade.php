@@ -106,8 +106,8 @@
 {!! Form::model($admin, ['method' => 'PATCH','route' => ['morder.update', $admin->id]]) !!}
 {!! Form::submit('Done', ['class' => 'btn btnprimary'])
 !!}
- {!! Form::close() !!}
- <a class="btn btn-info" href="{{ route('manageorders.show',$admin->id) }}">Detail</a>
+<a class="btn btn-info" href="{{ route('manageorders.show',$admin->id) }}">Detail</a>
+{!! Form::close() !!}
 
  </td>
  </tr>

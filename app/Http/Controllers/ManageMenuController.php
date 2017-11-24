@@ -60,8 +60,19 @@ class ManageMenuController extends Controller
          'desc' => 'required',
          'price' => 'required',
          'catagory' => 'required',
+         'image' => 'required|mimes:jpeg,png,jpg',
          ]);
          $input = $request->all();
+         
+         $imageName = '';
+         if ( $request->hasFile('image')) {
+             $imageExtension = $request->file('image')->getClientOriginalExtension();
+             $imageName = 'image_'.time().'.'.$imageExtension;
+             $imageDestination = base_path() . '/public/uploads';
+             $request->file('image')->move($imageDestination, $imageName);
+             $input['image'] = $imageName;
+             }
+             
          $admin = Menu::create($input);
          return redirect()->route('managemenus.index')
          ->with('success','Admin successfully added'); 

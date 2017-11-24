@@ -75,7 +75,7 @@ class ManageOrderController extends Controller
      */
     public function show($id)
     {
-        $admin = Ordermenu::find($id);
+        $admin = Cekorder::find($id);
         return view('admins.showOrder',compact('admin'));
     }
 

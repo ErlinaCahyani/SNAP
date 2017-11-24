@@ -1,4 +1,16 @@
+create view orders as
+select distinct t.id, idCus, tgl, waktu, total, isdeliv, t.status
+from ordertotals t, ordermenus where t.id=idOrder;
+
 delimiter //
+create trigger deleteOrderTotal
+before delete on ordertotals
+for each row
+begin
+delete from ordermenus where idorder=old.id;
+end //
+
+
 drop trigger if exists updateTotalOrder;//
 create trigger updateTotalOrder
 after insert on ordermenus

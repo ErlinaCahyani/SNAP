@@ -15,7 +15,7 @@ class Menu extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'desc', 'price','catagory',
+        'name', 'desc', 'price','image','catagory',
     ];
 
     /**

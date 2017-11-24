@@ -27,7 +27,7 @@
 </div>
 
  @endif
- {!! Form::open(array('route' => 'managemenus.store','method'=>'POST')) !!}
+ {!! Form::open(array('route' => 'managemenus.store','method'=>'POST', 'files'=>true)) !!}
  <div class="row">
  <div class="col-md-10 col-md-offset-1">
  <div class="form-group">
@@ -59,6 +59,12 @@
  <div class="form-group">
  <strong>Description:</strong>
  {!! Form::text('desc', null, array('placeholder' => 'Description','class' => 'form-control')) !!}
+ </div>
+ </div>
+ <div class="col-xs-10 col-sm-10 col-md-10">
+ <div class="form-group">
+ <strong>Image:</strong>
+ {!! Form::file('image', null, array('class' => 'custom-file-control')) !!}
  </div>
  </div>
  <div class="row">

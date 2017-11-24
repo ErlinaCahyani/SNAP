@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html class="no-js">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>SNAP Restaurant</title>
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- CSS
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>SNAP Restaurant</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- CSS
         ================================================ -->
         <!-- Owl Carousel -->
-		<link rel="stylesheet" href="{{ asset('ResTem/css/owl.carousel.css') }}">
+        <link rel="stylesheet" href="{{ asset('ResTem/css/owl.carousel.css') }}">
         <!-- bootstrap.min css -->
-		<link rel="stylesheet" href="{{ asset('ResTem/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('ResTem/css/bootstrap.min.css') }}">
         <!-- Font-awesome.min css -->
-		<link rel="stylesheet" href="{{ asset('ResTem/css/font-awesome.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('ResTem/css/font-awesome.min.css') }}">
         <!-- Main Stylesheet -->
         <link rel="stylesheet" href="{{ asset('ResTem/css/animate.min.css') }}">
 
-		<link rel="stylesheet" href="{{ asset('ResTem/css/main.css') }}">
+        <link rel="stylesheet" href="{{ asset('ResTem/css/main.css') }}">
         <!-- Responsive Stylesheet -->
-		<link rel="stylesheet" href="{{ asset('ResTem/css/responsive.css') }}">
+        <link rel="stylesheet" href="{{ asset('ResTem/css/responsive.css') }}">
 
 
-		<!-- Js -->
+        <!-- Js -->
         <script src="{{ asset('ResTem/js/vendor/modernizr-2.6.2.min.js') }}"></script>
         <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
         <script>window.jQuery || document.write('<script src="{{ asset('ResTem/js/vendor/jquery-1.10.2.min.js') }}"><\/script>')</script>
@@ -33,12 +33,12 @@
         <script src="{{ asset('ResTem/js/plugins.js') }}"></script>
         <script src="{{ asset('ResTem/js/wow.min.js') }}"></script>
         <script src="{{ asset('ResTem/js/main.js') }}"></script>
-	</head>
+    </head>
 
-	<body>
-	<!--
-	header-img start 
-	============================== -->
+    <body>
+    <!--
+    header-img start 
+    ============================== -->
     <section id="hero-area">
       <div class="container-header">
         <img class="img-responsive" src="{{ asset('ResTem/images/header.jpg') }}" alt=""></div>
@@ -49,11 +49,12 @@
                     <div class="block">
                         <!--<h1 class="headingheader">SNAP Restaurant</h1>-->
                         <div >
-                            <img class="img-responsive" src="{{ asset('ResTem/images/logo-header.png') }}" alt="">
+                            <center><img class="img-responsive" src="{{ asset('ResTem/images/logo-header.png') }}" alt=""></center>
                         </div>
                         </br>
                         <p class="conten-head">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            Selamat datang di Restaurant Snap. Kepuasan pelanggan adalah prioritas kami.
+                            Makan mudah, cepat dan sedap.
                         </p>
                     </div><!--end block-->
                 </div>
@@ -61,10 +62,10 @@
             </div>
       </div>
     </section>
-	<!--
+    <!--
     Header start 
-	============================== -->
-	<nav id="navigation">
+    ============================== -->
+    <nav id="navigation">
         <div>
             <div class="row">
                 <div class="col-md-12">
@@ -87,45 +88,14 @@
 
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                              <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @if (Auth::guest())
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
-                        @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                     <i class="fa fa-user" style="font-size: 20px;"></i><span class="caret"></span>
-                                </a>
-
-                                <ul class="dropdown-menu" role="menu">
-                                    <li style="padding-left: 10px">
-                                        <strong>{{ Auth::user()->name }}</strong>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endif
-                    </ul>
                               <ul class="nav navbar-nav navbar-right" id="top-nav">
                                 <li><a href="#hero-area">Home</a></li>
-                                <li><a href="#about-us">Specials</a></li>
-                                <li><a href="#blog">Menus</a></li>
-                                <li><a href="#price">Reserve/Order</a></li>
-                                <!--<li><a href="#subscribe">news</a></li>-->
-                                <li><a href="#contact-us">About</a></li>
+                                <li><a href="#about-us">about us</a></li>
+                                <li><a href="#blog">Blog</a></li>
+                                <li><a href="#price">menu</a></li>
+                                <li><a href="#subscribe">news</a></li>
+                                <li><a href="#contact-us">contacts</a></li>
                               </ul>
-
                             </div><!-- /.navbar-collapse -->
                           </div><!-- /.container-fluid -->
                         </nav>
@@ -134,7 +104,6 @@
             </div><!-- .row close -->
         </div><!-- .container close -->
     </nav><!-- header close -->
-
 
     <!--
     Specials start
@@ -147,7 +116,7 @@
                         <h1 class="heading wow fadeInUp" data-wow-duration="400ms" data-wow-delay="500ms" >Our <span>Special Menus</span> 
                         </h1>
                         </br>
-                        <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="600ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim </br> ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="600ms">Nikmati menu special kami</br></p>
                         </br>
                     </div>
                 </div><!-- .col-md-12 close -->
@@ -161,10 +130,14 @@
                     <div class="carousel-item active">
                         <div class="row coklat">
                             <div class="container-fluid">
-                                <div class="col-md-4 conten-cs">
-                                    Kepiting Goreng Yummmi
+                                <div class="col-md-6 conten-cs">
+                                    <font class="style5">Kepiting Goreng Yummmi</font><br><br><br>
+                                    <font class ="style6"> Kalimat kalimat kalimat</font>   <br><br>
+                                    <font class ="tombol1 col-md-offset-5"> <i class="fa fa-search" aria-hidden="true"></i> Search </font>
+                                    
+                                    <font class ="tombol1  col-md-offset-5"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Order</font>
                                 </div>
-                                <div class="col-md-8">
+                                <div class="col-md-6">
                                     <img class="img-responsive img-cs" src="{{ asset('ResTem/images/photo/cSpecial-1.jpg') }}" alt="First Menu Special">
                                 </div>
                             </div>
@@ -174,10 +147,11 @@
                     <div class="carousel-item">
                         <div class="row coklat">
                             <div class="container-fluid">
-                                <div class="col-md-4 conten-cs">
-                                    Kepiting Goreng Yummmi
+
+                                <div class="col-md-6 conten-cs">
+                                    Chicken Mushroom Special
                                 </div>
-                                <div class="col-md-8">
+                                <div class="col-md-6">
                                     <img class="img-responsive img-cs" src="{{ asset('ResTem/images/photo/cSpecial-2.jpg') }}" alt="First Menu Special">
                                 </div>
                             </div>
@@ -186,10 +160,10 @@
                     <div class="carousel-item">
                         <div class="row coklat">
                             <div class="container-fluid">
-                                <div class="col-md-4 conten-cs">
-                                    Kepiting Goreng Yummmi
+                                <div class="col-md-6 conten-cs">
+                                    Hot Coffee
                                 </div>
-                                <div class="col-md-8">
+                                <div class="col-md-6">
                                     <img class="img-responsive img-cs" src="{{ asset('ResTem/images/photo/cSpecial-3.jpg') }}" alt="First Menu Special">
                                 </div>
                             </div>
@@ -222,7 +196,7 @@
                 <div class="col-md-12">
                     <div class="block wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
                         <div class="title">
-                            <h3>Featured <span>Works</span></h3>
+                            <h3>Menu <span>Disarankan</span></h3>
                         </div>
                         <div id="owl-example" class="owl-carousel">
                             <div>
@@ -260,88 +234,108 @@
     about-us start
     ============================== -->
     <section id="about-us">
+    <center><h1 class="heading wow fadeInUp" data-wow-duration="400ms" data-wow-delay="500ms" ><span>MENUS</span></center>
+        
+        <div class="container">
+            <div class="row blocks">
+                <div class="col-sm-5 col-md-offset-1">
+                    <div class="bocks">
+                        <div class="col-md-7 gambar4">                      
+                            <img src="{{ asset('ResTem/images/blog/blog-img-3.jpg') }}" alt="">
+                        </div>
+                        <div class="col-md-5">
+                            <font class="style5">Beef Steak</font><br><br>
+                            <font class="style6">Daging sapi ditambahkan kentang, wortel, dan jagung panggang</font><br><br>
+                            <img class="tombol" src="{{ asset('ResTem/images/search.png') }}" alt="">
+                            <img class="tombol" src="{{ asset('ResTem/images/cart.png') }}" alt="">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-sm-5 col-md-offset-1">
+                    <div class="bocks">
+                        <div class="col-md-7 gambar4">                      
+                            <img src="{{ asset('ResTem/images/blog/blog-img-5.jpg') }}" alt="">
+                        </div>
+                        <div class="col-md-5">
+                            <font class="style5">Dorayaki</font><br><br>
+                            <font class="style6">Tumpukan kue dorayaki khas Jepang dengan lelehan selai Strawberry</font><br><br>
+                            <img class="tombol" src="{{ asset('ResTem/images/search.png') }}" alt="">
+                            <img class="tombol" src="{{ asset('ResTem/images/cart.png') }}" alt="">
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row pull-right col-sm-1">
+                <h1><i  class="fa fa-arrow-right" aria-hidden="true"></i></h1><br><br><br>
+            </div>
+        </div>
+        
+        
+        
+        
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="block">
-                        <img class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms" src="{{ asset('ResTem/images/cooker-img.png') }}" alt="cooker-img">
-                        <h1 class="heading wow fadeInUp" data-wow-duration="400ms" data-wow-delay="500ms" >Your <span>Restaurant’s</span> </br> Website Has To Look <span>Good</span>
-                        </h1>
-                        <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="600ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim </br> ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in </br>voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat</p>
-                    </div>
-                </div><!-- .col-md-12 close -->
-            </div><!-- .row close -->
-        </div><!-- .containe close -->
+                <div class="col-sm-3">
+                <div class="gambar2">
+                        <a target="_blank" href="">
+                            <img src="{{ asset('ResTem/images/drink.png') }}" alt="Forest">
+                        </a>
+                        <div class="style2"><font>SEA FOOD</font></div>
+                 </div>
+                 </div>
+                 <div class="col-sm-3">
+                 <div class="gambar2">
+                        <a target="_blank" href="">
+                            <img src="{{ asset('ResTem/images/food.png') }}" alt="Forest">
+                        </a>
+                        <div class="style2"><font>STEAK</font></div>
+                 </div>
+                 </div>
+                 <div class="col-sm-3">
+                 <div class="gambar2">
+                        <a target="_blank" href="">
+                            <img src="{{ asset('ResTem/images/food.png') }}" alt="Forest">
+                        </a>
+                        <div class="style2"><font>PASTA</font></div>
+                 </div>
+                 </div>
+                 <div class="col-sm-3">
+                 <div class="gambar2">
+                        <a target="_blank" href="">
+                            <img src="{{ asset('ResTem/images/drink.png') }}" alt="Forest">
+                        </a>
+                        <div class="style2"><font>DRINK</font></div>
+                 </div>
+                 </div>
+             </div>
+         </div>
+         
     </section><!-- #call-to-action close -->
     <!--
     blog start
     ============================ -->
     <section id="blog">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="block">
-                        <h1 class="heading">Latest <span>From</span> the <span>Blog</span></h1>
-                        <ul>
-                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="300ms">
-                                <div class="blog-img">
-                                    <img src="{{ asset('ResTem/images/blog/blog-img-1.jpg') }}" alt="blog-img">
-                                </div>
-                                <div class="content-right">
-                                    <h3>Homestyle Chicken Pot Pie</h3>
-                                    <p>Prepared in true New England fash-ion. Tender all-white meat chicken simmered...</p>
-                                </div>
-                            </li>
-                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="400ms">
-                                <div class="blog-img">
-                                    <img src="{{ asset('ResTem/images/blog/blog-img-2.jpg') }}" alt="blog-img">
-                                </div>
-                                <div class="content-right">
-                                    <h3>Homestyle Chicken Pot Pie</h3>
-                                    <p>Prepared in true New England fash-ion. Tender all-white meat chicken simmered...</p>
-                                </div>
-                            </li>
-                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="500ms">
-                                <div class="content-left">
-                                    <h3>Homestyle Chicken Pot Pie</h3>
-                                    <p>Prepared in true New England fash-ion. Tender all-white meat chicken simmered...</p>
-                                </div>
-                                <div class="blog-img-2">
-                                    <img src="{{ asset('ResTem/images/blog/blog-img-3.jpg') }}" alt="blog-img">
-                                </div>
-                            </li>
-                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="600ms">
-                                <div class="content-left">
-                                    <h3>Homestyle Chicken Pot Pie</h3>
-                                    <p>Prepared in true New England fash-ion. Tender all-white meat chicken simmered...</p>
-                                </div>
-                                <div class="blog-img-2">
-                                    <img src="{{ asset('ResTem/images/blog/blog-img-4.jpg')}}" alt="blog-img">
-                                </div>
-                            </li>
-                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="700ms">
-                                <div class="blog-img">
-                                    <img src="{{ asset('ResTem/images/blog/blog-img-5.jpg')}}" alt="blog-img">
-                                </div>
-                                <div class="content-right">
-                                    <h3>Homestyle Chicken Pot Pie</h3>
-                                    <p>Prepared in true New England fash-ion. Tender all-white meat chicken simmered...</p>
-                                </div>
-                            </li>
-                            <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="800ms">
-                                <div class="blog-img">
-                                    <img src="{{ asset('ResTem/images/blog/blog-img-6.jpg')}}" alt="blog-img">
-                                </div>
-                                <div class="content-right">
-                                    <h3>Homestyle Chicken Pot Pie</h3>
-                                    <p>Prepared in true New England fash-ion. Tender all-white meat chicken simmered...</p>
-                                </div>
-                            </li>
-                        </ul>
-                        <a class="btn btn-default btn-more-info wow bounceIn" data-wow-duration="500ms" data-wow-delay="1200ms" href="#" role="button">More Info</a>
-                    </div>
-                </div><!-- .col-md-12 close -->
-            </div><!-- .row close -->
+        <div class="container" width="80%">
+        <div class="col-sm-6">
+            <div class="gambar3">
+                <a target="_blank" href="">
+                    <img src="{{ asset('ResTem/images/books-table.png') }}" alt="Forest">
+                </a>
+                <div class="style1"><font>Book Tables</font></div>
+                <div class="style5"><font>Booking meja disini</font></div>
+         </div>
+         </div>
+         <div class="col-sm-6">
+         <div class="gambar3">
+                <a target="_blank" href="">
+                    <img src="{{ asset('ResTem/images/cart.png') }}" alt="Forest">
+                </a>
+                <div class="style1"><font>Order Menu</font></div>
+                <div class="style5"><font>Pesan makanan disini</font></div>
+         </div>
+         </div>
         </div><!-- .containe close -->
     </section><!-- #blog close -->
     <!--
@@ -352,231 +346,15 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="block">
-                        <h1 class="heading wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">our <span>MENU</span> the <span>PRICE</span></h1>
-                        <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </p>
-                        <div class="pricing-list">
-                            <div class="title">
-                                <h3>Featured <span>on the week</span></h3>
-                            </div>
-                            <ul>
-                                <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">
-                                    <div class="item">
-                                        <div class="item-title">
-                                            <h2>Pancakes n' Such</h2>
-                                            <div class="border-bottom"></div>
-                                            <span>$ 25.00</span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim&&</p>
-                                    </div>
-                                </li>
-                                <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">
-                                    <div class="item">
-                                        <div class="item-title">
-                                            <h2>Homestyle Chicken Pot Pie</h2>
-                                            <div class="border-bottom"></div>
-                                            <span>$ 10.00</span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim&&</p>
-                                    </div>
-                                </li>
-                                <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="500ms">
-                                    <div class="item">
-                                        <div class="item-title">
-                                            <h2>Cereal, Panecillos y Frutas </h2>
-                                            <div class="border-bottom"></div>
-                                            <span>$ 5.00</span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim&&</p>
-                                    </div>
-                                </li>
-                                <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="600ms">
-                                    <div class="item">
-                                        <div class="item-title">
-                                            <h2>Meat of Skewers</h2>
-                                            <div class="border-bottom"></div>
-                                            <span>$ 15.00</span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim&&</p>
-                                    </div>
-                               </li>
-                                <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="700ms">
-                                    <div class="item">
-                                        <div class="item-title">
-                                            <h2>Steak with a Garlic and Parsley Risotto</h2>
-                                            <div class="border-bottom"></div>
-                                            <span>$ 75.00</span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim&&</p>
-                                    </div>
-                                </li>
-                                <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="800ms">
-                                    <div class="item">
-                                        <div class="item-title">
-                                            <h2>Caesar Salad</h2>
-                                            <div class="border-bottom"></div>
-                                            <span>$ 7.00</span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim&&</p>
-                                    </div>
-                                </li>
-                            </ul>
-                            <a class="btn btn-default pull-right wow bounceIn" data-wow-duration="500ms" data-wow-delay="1200ms" href="#" role="button">More Info</a>
-                        </div>
+                        <h1 class="heading wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">ABOUT <span>SNAP</span></h1>
+                        <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">Anda dapat melihat Restaurant Snap disini </p>
+                        <center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63251.00719210155!2d110.34632093084797!3d-7.769884421320139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a59c97a30377d%3A0x331b605ec75c93d0!2sPreksu+Ayam+Geprek+%26+Susu!5e0!3m2!1sid!2sid!4v1511150285407" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </center>
                     </div>
                 </div><!-- .col-md-12 close -->
             </div><!-- .row close -->
         </div><!-- .containe close -->
     </section><!-- #price close -->
-    <!--
-    subscribe start
-    ============================ -->
-    <section id="subscribe">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="block">
-                        <h1 class=" heading wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms"> SUBSCRIBE <span>to our</span> NEWSLETTER</h1>
-                        <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
-                        <form class="form-inline">
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Enter your email to subscribe...">
-                                    <div class="input-group-addon">
-                                        <button class="btn btn-default" type="submit">subscribe</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div><!-- .col-md-12 close -->
-            </div><!-- .row close -->
-        </div><!-- .containe close -->
-    </section><!-- #subscribe close -->
-    <!--
-    CONTACT US  start
-    ============================= -->
-    <section id="contact-us">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="block">
-                        <h1 class="heading wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">our <span>CONTACT US</span></h1>
-                        <h3 class="title wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">Sign Up for <span>Email Alerts</span> </h3>
-                        <form>
-                            <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="600ms">
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Write your full name here...">
-                            </div>
-                            <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="800ms">
-                                <input type="text" class="form-control" placeholder="Write your email address here...">
-                            </div>
-                            <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1000ms">
-                                <textarea class="form-control" rows="3" placeholder="Write your message here..."></textarea>
-                            </div>
-                        </form>
-                        <a class="btn btn-default wow bounceIn" data-wow-duration="500ms" data-wow-delay="1300ms" href="#" role="button">send your message</a>
-                    </div>
-                </div><!-- .col-md-12 close -->
-            </div><!-- .row close -->
-        </div><!-- .container close -->
-    </section><!-- #contact-us close -->
-    <!--
-    footer  start
-    ============================= -->
-    <section id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="block wow fadeInLeft"  data-wow-delay="200ms">
-                        <h3>CONTACT <span>INFO</span></h3>
-                        <div class="info">
-                            <ul>
-                                <li>
-                                  <h4><i class="fa fa-phone"></i>Telefone</h4>
-                                  <p>(000) 123 456 78- (000) 123 4567 89</p>
-                                    
-                                </li>
-                                <li>
-                                  <h4><i class="fa fa-map-marker"></i>Address</h4>
-                                  <p>2046 Blue Spruce Lane Laurel Canada</p>
-                                </li>
-                                <li>
-                                  <h4><i class="fa fa-envelope"></i>E mail</h4>
-                                  <p>rest@gmail.com - rest@mail.ru</p>
-                                  
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- .col-md-4 close -->
-                <div class="col-md-4">
-                    <div class="block wow fadeInLeft"  data-wow-delay="700ms">
-                        <h3>LATEST <span>BLOG POSTS</span></h3>
-                        <div class="blog">
-                            <ul>
-                                <li>
-                                    <h4><a href="#">Nov 9-2014</a></h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. Curabitur ut blandit sapien</p>
-                                </li>
-                                <li>
-                                    <h4><a href="#">Sep 8-2014</a></h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. Curabitur ut blandit sapien</p>
-                                </li>
-                            </ul>                
-                        </div>
-                    </div>
-                </div>
-                <!-- .col-md-4 close -->
-                <div class="col-md-4">
-                    <div class="block wow fadeInLeft"  data-wow-delay="1100ms">
-                        <div class="gallary">
-                            <h3>PHOTO <span>STREAM</span></h3>
-                            <ul>
-                                <li>
-                                    <a href="#"><img src="{{ asset('ResTem/images/photo/photo-1.jpg')}}" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="{{ asset('ResTem/images/photo/photo-2.jpg')}}" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="{{ asset('ResTem/images/photo/photo-3.jpg')}}" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="{{ asset('ResTem/images/photo/photo-4.jpg')}}" alt=""></a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="social-media-link">
-                            <h3>Follow <span>US</span></h3>
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-dribbble"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-behance"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- .col-md-4 close -->
-            </div><!-- .row close -->
-        </div><!-- .containe close -->
-    </section><!-- #footer close -->
     <!--
     footer-bottom  start
     ============================= -->
@@ -591,5 +369,5 @@
             </div>
         </div>
     </footer>
-	</body>
+    </body>
 </html>

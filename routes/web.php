@@ -25,6 +25,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['middleware' =>'web'],function (){
 	Route::auth();
 });
+
 Route::group(['middleware' => ['web','auth']],function (){
 	//Route::get('/home','HomeController@index');
 	Route::get('/home',function(){
@@ -60,6 +61,12 @@ Route::prefix('user')->group(function() {
 Route::get('/',['middleware' => ['user'],function (){
 	return view('users.userHome');
 }]);
-Route::resource('order', 'OrderController');
+Route::resource('orders', 'OrderTotalController');
+Route::resource('deliv', 'x');
+Route::resource('ordermenus', 'OrderController');
+
+Route::get('upload',['as'=>'upload.index','uses'=>'OrderTotalController@index']);
+Route::get('upload/create',['as'=>'upload.create','uses'=>'OrderTotalController@create']);
+Route::post('upload',['as'=>'upload.store','uses'=>'OrderTotalController@store']);
 
 });

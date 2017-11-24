@@ -13,6 +13,7 @@
                         </div>
                     @endif
                     ini yang betul You are logged in!
+                    <a href="{{ route('orders.index') }}">Orders</a>
                 </div>
             </div>
         </div>

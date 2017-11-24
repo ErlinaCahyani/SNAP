@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Ordertotal extends Authenticatable
+class Order extends Authenticatable
 {
     use Notifiable;
 
@@ -14,9 +14,6 @@ class Ordertotal extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-        'id', 'tgl','waktu','total','isDeliv','status',
-    ];
 
     /**
      * The attributes that should be hidden for arrays.

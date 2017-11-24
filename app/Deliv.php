@@ -15,7 +15,7 @@ class Deliv extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'id', 'alamat','status',
+        'id', 'alamat','image','status',
     ];
 
     /**

@@ -17,8 +17,8 @@ class Controller extends BaseController
         if(Auth::user()->type=="Admin"){
 			//return view('admins.adminHome');
 			$this->middleware('isAdmin');
-		} else {
-			$this->middleware('auth');
+		} else if(Auth::user()->type=="User"){
+			$this->middleware('isUser');
 		}
         
     }
