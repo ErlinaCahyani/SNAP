@@ -23,6 +23,16 @@ class ManageSpecialController extends Controller
         $admins = Special::orderBy('id','DESC')->paginate(5);
         return view('admins.indexSpecial',compact('admins'))->with('i', ($request->input('page', 1) - 1) * 5);
     }
+	
+	/*
+    Searching
+    */
+    public function search(Request $request)
+    {
+        $cari = $request->get('search');
+        $admins = Special::where('name','like','%'.$cari.'%')->paginate(10);
+        return view('admins.indexSpecial', compact('admins'))->with('i', ($request->input('page', 1) - 1) * 5);
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -31,7 +41,7 @@ class ManageSpecialController extends Controller
      */
     public function create()
     {
-        
+     return view('admins.createSpecial');   
     }
 
     /**
@@ -51,7 +61,7 @@ class ManageSpecialController extends Controller
          $input = $request->all();
          $admin = Special::create($input);
          return redirect()->route('managespecials.index')
-         ->with('success','Admin successfully added'); 
+         ->with('success','Special menus successfully added'); 
     }
 
     /**
@@ -62,7 +72,8 @@ class ManageSpecialController extends Controller
      */
     public function show($id)
     {
-        //
+        $admin= Special::find($id);
+		return view('admins.showSpecial',compact('admin'));
     }
 
     /**
@@ -73,7 +84,8 @@ class ManageSpecialController extends Controller
      */
     public function edit($id)
     {
-        //
+        $admin = Special::find($id);
+		return view('admins.editSpecial',compact('admin'));
     }
 
     /**
@@ -85,7 +97,16 @@ class ManageSpecialController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+         'name' => 'required',
+         'price' => 'required',
+         'catagory' => 'required',
+         'desc' => 'required',
+         ]);
+         $input = $request->all();
+         $admin = Special::find($id);
+         $admin->update($input);
+         return redirect()->route('managespecials.index')->with('success','Special menus successfully updated'); 
     }
 
     /**
@@ -98,6 +119,6 @@ class ManageSpecialController extends Controller
     {
         Special::find($id)->delete();
         return redirect()->route('managespecials.index')
-        ->with('success','Admin successfully deleted');
+        ->with('success','Special menus successfully deleted');
     }
 }

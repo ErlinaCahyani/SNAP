@@ -53,7 +53,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                               </button>
-                                  <a class="navbar-brand" href="#">
+                                  <a class="navbar-brand" href="{{ url('/') }}">
                                     <img src="{{ asset('ResTem/images/logo.png') }}" alt="Logo">
                                   </a>
 
@@ -92,12 +92,12 @@
                         @endif
                     </ul>
                               <ul class="nav navbar-nav navbar-right" id="top-nav">
-                                <li><a href="/">Home</a></li>
+                                <li><a href="{{ url('/') }}">Home</a></li>
                                 <li><a href="{{ url('/') }}">Specials</a></li>
-                                <li><a href="#blog">Menus</a></li>
-                                <li><a href="#price">Reserve/Order</a></li>
+                                <li><a href="{{ url('/') }}">Menus</a></li>
+                                <li><a href="{{ url('/') }}">Reserve/Order</a></li>
                                 <!--<li><a href="#subscribe">news</a></li>-->
-                                <li><a href="#contact-us">About</a></li>
+                                <li><a href="{{ url('/') }}">About</a></li>
                               </ul>
 
                             </div><!-- /.navbar-collapse -->

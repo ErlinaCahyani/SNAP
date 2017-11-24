@@ -71,9 +71,55 @@ a:active {
   background: url("../images/overlay-pattern.png") #000000;
   opacity: 0.3;
 }
+/*padding=========================================
+*/
+.p3{
+  padding: 3%;
+  padding-top: 0%;
+}
+.p1{
+  padding: 1%;
+  padding-top: 3%;
+}
+
+.bapp{
+  width: 100%;
+  height: 100vh;
+}
+.bapp2{
+  padding-top: 8%;
+}
+
 /*
 warna=============================================
 */
+.gra{
+background: linear-gradient(#F3F3F3, #fff); /* Standard syntax */
+  background: -webkit-linear-gradient(#F3F3F3, #fff); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#F3F3F3, #fff); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#F3F3F3, #fff); /* For Firefox 3.6 to 15 */
+}
+.textcoklat{
+  color: #3E1C0B;
+}
+.textmaroon{
+  color:#980000 ;
+}
+
+.x{
+  width: 100%;
+}
+.biru{
+  background-color: #0088CC;
+  color: #fff;
+  width: 100%;
+}
+.abu{
+  background-color: #F3F3F3;
+}
+.putih{
+  background-color: #fff;
+}
 .coklat {
   background-color: #3E1C0B;
   color: #fff;
@@ -348,139 +394,139 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
     about-us Start
 --*/
 ul#menu{
-	//margin: auto;
+  //margin: auto;
         margin-top: 8px;
-	margin-right: 35px; 
+  margin-right: 35px; 
 }
 ul#menu, .sub1{
-	list-style: none;
+  list-style: none;
         font-weight: normal;
 }
 ul#menu li{
-	border: 2px solid pink;
-	background-color: #8d9db6;
-	margin-left: 10px;
-	width: 125px;
-	height: 35px;
-	float: right;
+  border: 2px solid pink;
+  background-color: #8d9db6;
+  margin-left: 10px;
+  width: 125px;
+  height: 35px;
+  float: right;
         line-height: 35px;
-	text-align: center;
+  text-align: center;
         border-radius: 3px;
         position: relative;
         
 }
 .block{
-	margin-bottom:20px;
+  margin-bottom:20px;
 }
 .style4 {
-	margin-left:5px;
+  margin-left:5px;
         color: #ffcccc;
-	display: block;
+  display: block;
         font-family: cooper black;
-	width: 125px;
-	height: 35px;
+  width: 125px;
+  height: 35px;
 }
 .style3 {
-	margin-left:5px;
+  margin-left:5px;
         color: white;
         font-family: cooper black;
 }
 .style2 {
-	margin-top:10px;
-	text-align:center;
+  margin-top:10px;
+  text-align:center;
         color: black;
         font-family: cooper black;
-		font-size:30px;
+    font-size:30px;
 }
 .style1 {
-	margin-top:10px;
-	text-align:center;
+  margin-top:10px;
+  text-align:center;
         color: white;
         font-family: cooper black;
-		font-size:30px;
+    font-size:30px;
 }
 .style5 {
-	margin-top:10px;
-	text-align:center;
+  margin-top:10px;
+  text-align:center;
         color: white;
         font-family: cooper black;
-		font-size:20px;
+    font-size:20px;
 }
 .style6 {
-	margin-top:10px;
-	text-align:left;
+  margin-top:10px;
+  text-align:left;
         color: white;
         font-family: tahoma;
-		font-size:13px;
+    font-size:13px;
 }
 .menus{
-	margin-bottom:50px;
+  margin-bottom:50px;
 }
 #kotak_menu{
     margin-top: 15px;
-	border : 3px solid;
-	width: 270px;
+  border : 3px solid;
+  width: 270px;
     height: 200px;
     
     border-radius: 30px;
 }
 .tabel{
-	padding-left:10px;
+  padding-left:10px;
 }
 .tombol{
-	border-radius: 10px;
-	border: 1px solid white;
-	margin: auto;
-	margin-right:7%;
-	padding: 4%;
-	width: 35%;
-	height: 8%;
-	background-color: none;
-	text-align: left
+  border-radius: 10px;
+  border: 1px solid white;
+  margin: auto;
+  margin-right:7%;
+  padding: 4%;
+  width: 35%;
+  height: 8%;
+  background-color: none;
+  text-align: left
 }
 
 .tombol1{
-	font-size:20px;
-	border-radius: 10px;
-	border: 1px solid white;
-	margin: auto;
-	padding: 8px;
-	width: auto;
-	height: auto;
-	background-color: none;
-	text-align: bottom;
+  font-size:20px;
+  border-radius: 10px;
+  border: 1px solid white;
+  margin: auto;
+  padding: 8px;
+  width: auto;
+  height: auto;
+  background-color: none;
+  text-align: bottom;
 }
 
 .gambar2{
    margin:auto;
-	border : 5px solid #3E1C0B;
-	width: 270px;
+  border : 5px solid #3E1C0B;
+  width: 270px;
     height: 200px;
     text-align:center;
     border-radius: 30px;
-	padding : 15px;
+  padding : 15px;
 }
 .gambar3{
    margin:auto;
-	border : 5px solid white;
-	width: 320px;
+  border : 5px solid white;
+  width: 320px;
     height: 350px;
     text-align:center;
     border-radius: 30px;
-	padding : 15px;
+  padding : 15px;
 }
 .bocks{
-	text-align:left;
+  text-align:left;
    margin:auto;
    background-color: #3E1C0B;
-	width: 90%;
+  width: 90%;
     height: 210px;
-	padding : 3%;
+  padding : 3%;
 }
 .gambar4 img {
-	border: 1px solid #575D63;
+  border: 1px solid #575D63;
      width: 100%;
-	 height:180px;
+   height:180px;
      
 }
 
@@ -492,8 +538,8 @@ ul#menu li{
     height: 150px;
 }
 .blocks{
-	margin-top: 5%;
-	margin-bottom: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 .desc {
     width: 180px;
@@ -503,21 +549,21 @@ ul#menu li{
     height: 50px;
 }
 #menu a{
-	text-decoration: none;
+  text-decoration: none;
         color: #ffcccc;
-	display: block;
+  display: block;
         font-family: cooper black;
-	width: 125px;
-	height: 35px;
+  width: 125px;
+  height: 35px;
 }
 
 ul#menu li:hover > a{
-	background-color: beige;
-	color: darkblue;
+  background-color: beige;
+  color: darkblue;
         
 }
 #menu li:hover a:hover{
-	background-color: lightblue;
+  background-color: lightblue;
         
 }
 .table3 {
@@ -528,7 +574,7 @@ margin : 7px;
     border: 1px solid #ccc;
     float: left;
     width: 200px;
-	height:200px;
+  height:200px;
     text-align: center;
 }
 
@@ -629,41 +675,41 @@ bootstrap.css:3650
     user-select: none;
 }
 .carousel1 {
-	height: 249px;
+  height: 249px;
 }
 
 .carousel1 li {
-	float: left;
-	width: 240px !important;
-	font-size: 12px;
+  float: left;
+  width: 240px !important;
+  font-size: 12px;
 }
 
 .carousel1 li >div {
-	padding: 0 10px;
+  padding: 0 10px;
 }
 
 .carousel1 li .price {
-	display: inline-block;
-	background: #699440;
-	color: #fff;
-	min-width: 41px;
-	height: 38px;
-	border-radius: 4px;
-	font: 20px/36px 'Lobster', cursive;
-	text-align: center;
-	margin-top: 15px;
+  display: inline-block;
+  background: #699440;
+  color: #fff;
+  min-width: 41px;
+  height: 38px;
+  border-radius: 4px;
+  font: 20px/36px 'Lobster', cursive;
+  text-align: center;
+  margin-top: 15px;
 }
 
 
 .carousel1 li span {
-	line-height: 16px;
+  line-height: 16px;
 }
 .carousel1 img {
-	box-shadow: 2px 2px 3px #ddd;
-	padding: 4px;
-	background: #fff;
-	border: 1px solid #e6e4e4;
-	 -moz-box-sizing: border-box;
+  box-shadow: 2px 2px 3px #ddd;
+  padding: 4px;
+  background: #fff;
+  border: 1px solid #e6e4e4;
+   -moz-box-sizing: border-box;
  -webkit-box-sizing: border-box;
  -o-box-sizing: border-box;
  box-sizing: border-box;

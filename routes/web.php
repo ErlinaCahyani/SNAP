@@ -43,7 +43,8 @@ Route::get('/',['middleware' => ['admin'],function (){
 }]);
 Route::resource('managemenus', 'ManageMenuController');
 Route::get('carimenu','ManageMenuController@search');
-Route::resource('managespecials', 'ManageMenuController');
+Route::resource('managespecials', 'ManageSpecialController');
+Route::get('carispecial','ManageSpecialController@search');
 Route::resource('managetables', 'ManageTableController');
 Route::get('caritable','ManageTableController@search');
 Route::resource('manageorders', 'ManageOrderController');
@@ -64,6 +65,7 @@ Route::get('/',['middleware' => ['user'],function (){
 Route::resource('orders', 'OrderTotalController');
 Route::resource('deliv', 'x');
 Route::resource('ordermenus', 'OrderController');
+Route::resource('reserves', 'ReservationController');
 
 Route::get('upload',['as'=>'upload.index','uses'=>'OrderTotalController@index']);
 Route::get('upload/create',['as'=>'upload.create','uses'=>'OrderTotalController@create']);

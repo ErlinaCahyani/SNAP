@@ -1,15 +1,16 @@
 @extends('layouts.app')
 @section('content')
-<div class="row ">
+<div class="row">
 <div class="container">
-	<div class="col-md-8 col-md-offset-2 p3 putih">
- <div class="title"><h1>Add<span> Menu</span></h1>
+	<div class="col-md-8 col-md-offset-2 putih">
+ <div class="title"><h1>Add<span> Special Menus</span></h1>
 	<div style="width: 10%;height: 2px;" class="maroon"></div>
  </div>
  <div class="pull-left mb-5">
- <a class="btn btn-success" href="{{ route('managemenus.index') }}"> Back</a>
+ <a class="btn btn-success" href="{{ route('managespecials.index') }}"> Back</a>
  </div>
 </br></br>
+</div>
 
  <div class="row">
  <div class="col-md-8 col-md-offset-2 putih p3">
@@ -27,7 +28,7 @@
 </div>
 
  @endif
- {!! Form::open(array('route' => 'managemenus.store','method'=>'POST', 'files'=>true)) !!}
+ {!! Form::open(array('route' => 'managespecials.store','method'=>'POST')) !!}
  <div class="row">
  <div class="col-md-10 col-md-offset-1">
  <div class="form-group">
@@ -61,23 +62,18 @@
  {!! Form::text('desc', null, array('placeholder' => 'Description','class' => 'form-control')) !!}
  </div>
  </div>
- <div class="col-xs-10 col-sm-10 col-md-10">
- <div class="form-group">
- <strong>Image:</strong>
- {!! Form::file('image', null, array('class' => 'custom-file-control')) !!}
- </div>
- </div>
  <div class="row">
- <div class="col-xs-6 text-left">
- <button type="submit" class="btn btn-primary">ADD MENU</button>
+ <div class="col-xs-6 col-md-offset-1">
+ <button type="submit" class="btn btn-primary">ADD MENUS</button>
  </div>
- <div class="col-xs-6">
+</br>
+ <div class="col-xs-6 col-md-offset-1">
  <button type="reset" class="btn btn-warning">CANCEL</button>
  </div>
  </div>
+</div>
  {!! Form::close() !!}
  </div>
  </div>
-</div>
 </div>
 @endsection 
