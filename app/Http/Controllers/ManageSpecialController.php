@@ -57,8 +57,19 @@ class ManageSpecialController extends Controller
          'desc' => 'required',
          'price' => 'required',
          'catagory' => 'required',
+         'tgl' => 'required',
+         'image' => 'required|mimes:jpeg,png,jpg',
          ]);
          $input = $request->all();
+         $imageName = '';
+         if ( $request->hasFile('image')) {
+             $imageExtension = $request->file('image')->getClientOriginalExtension();
+             $imageName = 'image_'.time().'.'.$imageExtension;
+             $imageDestination = base_path() . '/public/uploads';
+             $request->file('image')->move($imageDestination, $imageName);
+             $input['image'] = $imageName;
+             }
+
          $admin = Special::create($input);
          return redirect()->route('managespecials.index')
          ->with('success','Special menus successfully added'); 
@@ -102,8 +113,20 @@ class ManageSpecialController extends Controller
          'price' => 'required',
          'catagory' => 'required',
          'desc' => 'required',
+         'tgl' => 'required',
+         'image' => 'required|mimes:jpeg,png,jpg',
          ]);
          $input = $request->all();
+         $imageName = '';
+         if ( $request->hasFile('image')) {
+             $imageExtension = $request->file('image')->getClientOriginalExtension();
+             $imageName = 'image_'.time().'.'.$imageExtension;
+             $imageDestination = base_path() . '/public/uploads';
+             $request->file('image')->move($imageDestination, $imageName);
+             $input['image'] = $imageName;
+             }
+
+
          $admin = Special::find($id);
          $admin->update($input);
          return redirect()->route('managespecials.index')->with('success','Special menus successfully updated'); 

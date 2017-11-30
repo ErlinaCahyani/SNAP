@@ -9,13 +9,16 @@
 
 <nav class="navbar navbar-light">
   <ul>
+    <li>
+          <a class="navbar-brand x" href="{{ url('/home') }}">Home</a>
+      </li>
       <li>
           <a class="navbar-brand x" href="{{ route('orders.index') }}">Orders</a>
       </li>
       <li>
           <a class="navbar-brand x" href="{{ route('reserves.index') }}">Reservations</a>
       </li>
-      
+     
   </ul>
 </nav>
 

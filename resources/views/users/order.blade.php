@@ -9,6 +9,9 @@
 
 <nav class="navbar navbar-light">
   <ul>
+    <li>
+          <a class="navbar-brand x" href="{{ url('/home') }}">Home</a>
+      </li>
       <li>
           <a class="navbar-brand x" href="{{ route('orders.index') }}">Orders</a>
       </li>
@@ -33,7 +36,7 @@
   </div>
 </div>
 </br>
-Note : if you choose delivery order, you must click "Delivery and Finish" and fill their form.
+Note : Click <i class="fa fa-check"></i> to finish your order. for Delivery Order, click <i class="fa fa-truck"></i> and fill it's form.
 </br>
  @if ($message = Session::get('success'))
  <div class="alert alert-success">
@@ -50,7 +53,7 @@ Note : if you choose delivery order, you must click "Delivery and Finish" and fi
  <th>IsDelivery</th>
  <th>Total</th>
  <th>IsAccepted</th>
- <th width="210px">Action</th>
+ <th width="220px">Action</th>
  </tr>
  </thead>
  <tbody>
@@ -66,9 +69,9 @@ Note : if you choose delivery order, you must click "Delivery and Finish" and fi
 {!! Form::model($admin, ['method' => 'DELETE','route' => ['orders.destroy', $admin->id]]) !!}
 {!! Form::submit('Cancel', ['class' => 'btn btn-warning'])
 !!}
-<a class="btn btn-primary" href="{{ route('orders.show',$admin->id) }}">Detail</a>
-<a class="btn btn-info" href="{{ route('deliv.edit',$admin->id) }}">Delivery</a>
-<a class="btn btn-info" href="{{ route('orders.edit',$admin->id,$a=1) }}">Finish</a>
+<a class="btn btn-primary" href="{{ route('orders.show',$admin->id) }}"><i class="fa fa-search"></i></a>
+<a class="btn btn-info" href="{{ route('orders.edit',$admin->id) }}"><i class="fa fa-check"></i></a>
+<a class="btn btn-info" href="{{ route('deliv.edit',$admin->id) }}"><i class="fa fa-truck"></i></a>
 {!! Form::close() !!}
 
 

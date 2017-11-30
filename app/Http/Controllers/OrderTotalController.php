@@ -21,7 +21,7 @@ class OrderTotalController extends Controller
     public function index(Request $request)
     {
     	$cari=Auth::user()->id;
-        $admins = Order::where('idCus',"2")->paginate(5);
+        $admins = Order::where('idCus',$cari)->paginate(5);
         return view('users.order',compact('admins'))->with('i', ($request->input('page', 1) - 1) * 5);
     }
 
@@ -83,7 +83,7 @@ class OrderTotalController extends Controller
     	$this->validate($request, [
          'tgl' => 'required',
          'waktu' => 'required',
-         'isdeliv' => 'required',
+         'isDeliv' => 'required',
          ]);
          $input = $request->all();
          $admin = Ordertotal::find($id);

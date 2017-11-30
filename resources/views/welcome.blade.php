@@ -163,6 +163,7 @@
 
         <div class="container">
         <div class="row wow fadeInUp">
+            
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
 
@@ -170,14 +171,14 @@
                         <div class="row coklat">
                             <div class="container-fluid">
                                 <div class="col-md-6 conten-cs">
-                                    <font class="style5">Kepiting Goreng Yummmi</font><br><br><br>
-                                    <font class ="style6"> Kalimat kalimat kalimat</font>   <br><br>
+                                    <font class="style5">{{$admins->name}}</font><br><br><br>
+                                    <font class ="style6">{{$admins->price}}</font>   <br><br>
                                     <font class ="tombol1 col-md-offset-5"> <i class="fa fa-search" aria-hidden="true"></i> Search </font>
                                     
                                     <font class ="tombol1  col-md-offset-5"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Order</font>
                                 </div>
                                 <div class="col-md-6">
-                                    <img class="img-responsive img-cs" src="{{ asset('ResTem/images/photo/cSpecial-1.jpg') }}" alt="First Menu Special">
+                                    <img class="img-responsive img-cs" src="{{ $admins->image }}" alt="First Menu Special">
                                 </div>
                             </div>
                         </div>
@@ -218,6 +219,7 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
+            }
         </div>
         </div>
     </section><!-- #call-to-action close -->

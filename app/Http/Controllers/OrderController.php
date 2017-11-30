@@ -16,10 +16,10 @@ class OrderController extends Controller
     }
     public function index(Request $request)
     {
-        /*
+        
         $admins = Cekorder::orderBy('id','DESC')->paginate(5);
         return view('users.order',compact('admins'))->with('i', ($request->input('page', 1) - 1) * 5);
-        */
+        
     }
 
     public function edit($id)

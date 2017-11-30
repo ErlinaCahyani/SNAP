@@ -15,7 +15,7 @@ class Special extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'desc', 'price','catagory','tgl'
+        'name', 'desc', 'price','catagory','tgl','image',
     ];
 
     /**

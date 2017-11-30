@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Menu;
 use Hash;
-//use App\Http\Middleware\isAdmin;
 
 class ManageMenuController extends Controller
 {

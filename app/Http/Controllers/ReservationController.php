@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Reservation;
 use Hash;
+use Auth;
 
 class ReservationController extends Controller
 {
@@ -15,7 +16,8 @@ class ReservationController extends Controller
     }
     public function index(Request $request)
     {
-        $admins = Reservation::orderBy('id','DESC')->paginate(5);
+        $cari=Auth::user()->id;
+        $admins = Reservation::where('idCus',$cari)->paginate(5);
         return view('users.Reser',compact('admins'))->with('i', ($request->input('page', 1) - 1) * 5);
     }
     public function store(Request $request)

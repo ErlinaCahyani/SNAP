@@ -39,6 +39,8 @@
  <div class="col-md-12">
  <div class="form-group">
  <strong>Is Delivery:</strong>
+ <!--{!! Form::text('isDeliv', null, array('placeholder' => 'yes/no','class' => 'form-control')) !!}-->
+ 
  {!! Form::select('isDeliv', array(
     'Yes' => 'Yes',
     'No' => 'No',
